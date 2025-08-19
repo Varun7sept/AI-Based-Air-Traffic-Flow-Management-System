@@ -63,13 +63,9 @@ AI-Based-Air-Traffic-Flow-Management-System/
 ## ⚙️ Installation & Setup
 
 ### 1. Clone Repository
-```bash
 git clone https://github.com/<your-username>/AI-Based-Air-Traffic-Flow-Management-System.git
 cd AI-Based-Air-Traffic-Flow-Management-System
 2. Create Virtual Environment (optional but recommended)
-bash
-Copy
-Edit
 python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
