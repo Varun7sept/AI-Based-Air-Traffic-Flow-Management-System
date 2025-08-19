@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Monitoring</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>✈️ AI-Based Air Traffic Flow Management System</h1>
+  
+  <h2>🌍 Flight Positions</h2>
+  <div id="map"></div>
+
+  <h2>⚠️ Collision Warnings</h2>
+  <table id="collision-table">
+    <thead>
+      <tr>
+        <th>Aircraft 1</th>
+        <th>Aircraft 2</th>
+        <th>Distance (m)</th>
+        <th>Altitude Difference (m)</th>
+        <th>Time to Collision (s)</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>📊 Flight Details</h2>
+  <table id="flight-details">
+    <thead>
+      <tr>
+        <th>Aircraft ID</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Altitude (m)</th>
+        <th>Velocity (m/s)</th>
+        <th>Course (deg)</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
